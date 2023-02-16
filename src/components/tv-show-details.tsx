@@ -49,7 +49,9 @@ const TVShowDetails: React.FC<TVShowDetailsProps> = ({
             <h4>Genres: {tvShow.genres}</h4>
           </div>
 
-          <div className={styles.show_name}>{tvShow.summary}</div>
+          <div className={styles.show_name}>
+            <h4>{tvShow.summary.replace(/<\/?p>|<\/?b>/g, "")}</h4>
+          </div>
 
           {tvShow.cast && tvShow.cast.length > 0 && (
             <>
@@ -69,8 +71,16 @@ const TVShowDetails: React.FC<TVShowDetailsProps> = ({
                     </div>
 
                     <div className={styles.cast_names_container}>
-                      {item.name && <h4>{item.name}</h4>}
-                      {item.character && <h6>as {item.character}</h6>}
+                      {item.name && (
+                        <div className={styles.cast_name}>
+                          <h4>{item.name}</h4>
+                        </div>
+                      )}
+                      {item.character && (
+                        <div className={styles.cast_char}>
+                          <h6>as {item.character}</h6>
+                        </div>
+                      )}
                     </div>
                   </div>
                 ))}
