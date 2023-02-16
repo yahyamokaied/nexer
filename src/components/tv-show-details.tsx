@@ -38,9 +38,45 @@ const TVShowDetails: React.FC<TVShowDetailsProps> = ({
 
         <div className={styles.details_container}>
           <div className={styles.show_name}>
-            <h2>{tvShow.name}</h2>
+            <h1>{tvShow.name}</h1>
           </div>
-          <StarRating average={tvShow.rating.average} />
+          <div className={styles.show_stars}>
+            <StarRating average={tvShow.rating.average} />
+          </div>
+          <div className={styles.show_name}>
+            <h4>Genres: {tvShow.genres}</h4>
+          </div>
+
+          {tvShow.cast && tvShow.cast.length > 0 && (
+            <>
+              <div className={styles.show_text_info}>
+                <h2>Cast</h2>
+              </div>
+              <div className={styles.cast_container}>
+                {tvShow.cast.map((cast) => (
+                  <div className={styles.cast_item}>
+                    <div className={styles.cast_img_container}>
+                      {cast.person && cast.person.image && (
+                        <img
+                          src={cast.person.image.original}
+                          className={styles.arrow}
+                        />
+                      )}
+                    </div>
+
+                    <div className={styles.cast_names_container}>
+                      {cast.person && <h4>{cast.person.name}</h4>}
+                      {cast.character && <h6>as {cast.character.name}</h6>}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+
+          <div className={styles.show_text_info}>
+            <h4>{tvShow.name}</h4>
+          </div>
         </div>
       </div>
     </div>
