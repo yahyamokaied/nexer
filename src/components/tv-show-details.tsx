@@ -16,6 +16,8 @@ const TVShowDetails: React.FC<TVShowDetailsProps> = ({
     onSelectTvShow(null);
   };
 
+  console.log("yahyaa ", tvShow);
+
   return (
     <div className={styles.show_details}>
       <div className={styles.back_container}>
@@ -47,36 +49,34 @@ const TVShowDetails: React.FC<TVShowDetailsProps> = ({
             <h4>Genres: {tvShow.genres}</h4>
           </div>
 
+          <div className={styles.show_name}>{tvShow.summary}</div>
+
           {tvShow.cast && tvShow.cast.length > 0 && (
             <>
               <div className={styles.show_text_info}>
                 <h2>Cast</h2>
               </div>
               <div className={styles.cast_container}>
-                {tvShow.cast.map((cast) => (
-                  <div className={styles.cast_item}>
+                {tvShow.cast.map((item) => (
+                  <div className={styles.cast_item} key={item.id}>
                     <div className={styles.cast_img_container}>
-                      {cast.person && cast.person.image && (
+                      {item.image && (
                         <img
-                          src={cast.person.image.original}
-                          className={styles.arrow}
+                          src={item.image.original}
+                          className={styles.cast_img}
                         />
                       )}
                     </div>
 
                     <div className={styles.cast_names_container}>
-                      {cast.person && <h4>{cast.person.name}</h4>}
-                      {cast.character && <h6>as {cast.character.name}</h6>}
+                      {item.name && <h4>{item.name}</h4>}
+                      {item.character && <h6>as {item.character}</h6>}
                     </div>
                   </div>
                 ))}
               </div>
             </>
           )}
-
-          <div className={styles.show_text_info}>
-            <h4>{tvShow.name}</h4>
-          </div>
         </div>
       </div>
     </div>
