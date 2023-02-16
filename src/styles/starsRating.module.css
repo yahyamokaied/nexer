@@ -1,0 +1,29 @@
+.stars {
+    display: flex;
+    width: 100%;
+    justify-content:flex-start;
+    align-items: flex-start;
+    font-size: var(--font-size-m);
+  }
+  
+  .star {
+    margin-right: 0.1em ;
+  }
+  
+  .star img {
+    height: 1em;
+  }
+
+  @media (min-width: 768px) {
+    .stars {
+      font-size: var(--font-size-s);
+    }
+  
+  }
+  
+  @media (max-width: 767px) {
+    .stars {
+      font-size: var(--font-size-xs);
+    }
+  }
+  

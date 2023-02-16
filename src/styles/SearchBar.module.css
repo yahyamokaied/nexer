@@ -1,0 +1,40 @@
+  .searchContainer {
+    display: flex;
+    background-color: var(--white-color);
+    padding: var(--spacing-xs);
+    width: 90%;
+  }
+
+  .searchBarInput {
+    display: flex;
+    width:90%;
+    border: none;
+    outline: none;
+    padding: var(--spacing-xs);
+    font-size: var(--font-size-l);
+  }
+  
+  .searchBarButton {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    outline: none;
+    padding: var(--spacing-s) var(--spacing-xl);
+    cursor: pointer;
+  }
+
+
+  @media (min-width: 768px) {
+    .searchContainer {
+      width: 50%;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .searchContainer {
+      width: 90%;
+    }
+  }
+
+
+  
