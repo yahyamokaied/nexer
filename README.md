@@ -1,6 +1,6 @@
 # Tv Series search
-## a Next.js application built with TypeScript and Redux Toolkit.
-## The application allows users to search for TV shows, view search results, and select a TV show to view more details.
+### a Next.js application built with TypeScript and Redux Toolkit.
+### The application allows users to search for TV shows, view search results, and select a TV show to view more details.
 
 # Installation
 ## To run this application,
@@ -32,3 +32,16 @@
 ## Redux Toolkit
 ## Axios
 ## TypeScript
+
+
+<img width="1116" alt="Screenshot 2023-02-16 at 21 19 33" src="https://user-images.githubusercontent.com/50097658/219478014-e56f374b-711d-4ee6-afc6-3c7f51493d56.png">
+
+<img width="1116" alt="Screenshot 2023-02-16 at 21 19 39" src="https://user-images.githubusercontent.com/50097658/219478017-2f4fc19e-171f-4b6f-82bd-90f1c855d832.png">
+
+<img width="1116" alt="Screenshot 2023-02-16 at 21 19 45" src="https://user-images.githubusercontent.com/50097658/219478023-ed1aaf11-3ae8-4765-b55e-8275351e8b32.png">
+
+
+
+
+
+
