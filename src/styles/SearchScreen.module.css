@@ -64,6 +64,7 @@
 @media (max-width: 767px) {
   .logo {
     width: 60vw;
+    margin-bottom: var(--spacing-l);
   }
 
   .logo_left {
